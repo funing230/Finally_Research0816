@@ -88,3 +88,5 @@ pd.DataFrame(y_pred).to_csv("../5.Final test/0618_y_prediction_lPLR76.csv", inde
 #         print()
 #
 # print(f"Accuracy: {accuracy}")
+
+print('08311518')

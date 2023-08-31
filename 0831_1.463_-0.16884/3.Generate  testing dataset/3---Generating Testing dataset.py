@@ -246,3 +246,5 @@ testing_dataset.insert(len(testing_dataset.columns), 'rate_z_score(-2)', rate_z_
 testing_dataset=testing_dataset.dropna()
 testing_dataset.to_csv("../4.Generate y_predict using Adaboost (traing dataset$testing dataset)/0617_testing_dataset.csv", index=True)
 
+
+print('08311518')
