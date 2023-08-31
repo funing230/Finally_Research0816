@@ -35,7 +35,7 @@ class HybridMlp:
             "ub": UB,
             "minmax": "max",
             "log_to": None,
-            "obj_weights": [0.40,0.60],
+            "obj_weights": [1],
             "save_population": False,
         }
 
@@ -89,7 +89,7 @@ class HybridMlp:
         tests.insert(len(tests.columns), 'z_score_singel', z_score_singel)
 
 
-        port_out_z_score_singel = 0.0
+        # port_out_z_score_singel = 0.0
         port_outa_z_score_singel = []
         MDD=-1
         try :
@@ -120,35 +120,37 @@ class HybridMlp:
             port_outa_z_score_singel = (1 + tests['port_outa_z_score_singel']).cumprod() # accumulative return
 
             MDD = get_mdd(port_outa_z_score_singel)
-            print("------FINALLY---------------------------------------")
-            print("Return : " + str(np.round(port_outa_z_score_singel.iloc[-1], 4)))
-            print("Standard Deviation : " + str(np.round(np.std(port_outa_z_score_singel), 4)))
-            print("Sharpe Ratio (Rf=0%) : " + str(np.round(port_outa_z_score_singel.iloc[-1] / (np.std(port_outa_z_score_singel)), 4)))
-            print("Max Drawdown: " + str(np.round(MDD, 4)))  # calculate_mdd(pt_out)
-            print('++++++++++++++++++++++++++++++++++++++')
-            print("a : " + str(a))
-            print("b : " + str(b))
-            print("k : " + str(k))
-            print("window1 : " + str(window1))
-            print("window2 : " + str(window2))
-            print("Z-score : "+ str(function_name))
-            print('-------------------------------------')
+            if  np.round(port_outa_z_score_singel.iloc[-1], 4) > 600:
+                # print("Condition met")
+                print("------FINALLY---------------------------------------")
+                print("Return : " + str(np.round(port_outa_z_score_singel.iloc[-1], 4)))
+                print("Standard Deviation : " + str(np.round(np.std(port_outa_z_score_singel), 4)))
+                print("Sharpe Ratio (Rf=0%) : " + str(np.round(port_outa_z_score_singel.iloc[-1] / (np.std(port_outa_z_score_singel)), 4)))
+                print("Max Drawdown: " + str(np.round(MDD, 4)))  # calculate_mdd(pt_out)
+                print('++++++++++++++++++++++++++++++++++++++')
+                print("a : " + str(a))
+                print("b : " + str(b))
+                print("k : " + str(k))
+                print("window1 : " + str(window1))
+                print("window2 : " + str(window2))
+                print("Z-score : "+ str(function_name))
+                print('-------------------------------------')
         except Exception as e:
             print("except:", e)
 
-        fitness=[np.round(port_outa_z_score_singel.iloc[-1], 4), np.round(MDD+10, 4)]
-
+        # fitness=[np.round(port_outa_z_score_singel.iloc[-1], 4), np.round(MDD+10, 4)]
+        fitness = np.round(port_outa_z_score_singel.iloc[-1], 4)
         return fitness
     def training(self):
         self.create_problem()
-        self.optimizer = GA.BaseGA(self.problem, GAepoch=self.GA_epoch,pop_size=self.pop_size, pc=0.7, pm=0.4)
+        self.optimizer = GA.BaseGA(self.problem, GAepoch=self.GA_epoch,pop_size=self.pop_size, pc=0.9, pm=0.2)
         self.solution, self.best_fit = self.optimizer.solve()
 
     def best_fitness(self):
         Return, MDD = self.best_fit
         print('-------------------------------------')
         print("Return : " + str(Return))
-        print("Max Drawdown: " + str(MDD))
+        # print("Max Drawdown: " + str(MDD))
         print('-------------------------------------')
 
     def best_model(self):
@@ -162,7 +164,7 @@ class HybridMlp:
 
 
 traing_start_index = '2017-11-09'
-traing_end_index = '2022-04-01'
+traing_end_index = '2022-09-01'
 
 # traing_start_index,traing_end_index
 
@@ -222,7 +224,7 @@ class Logger(object):
     def flush(self):
 	    pass
 
-sys.stdout = Logger("0617.log", sys.stdout)
+sys.stdout = Logger("0831afternoon.log", sys.stdout)
 sys.stderr = Logger("test_error.log", sys.stderr)		# redirect std err, if necessary
 
 

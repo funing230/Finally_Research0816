@@ -26,8 +26,8 @@ from result_util import get_pair_strategy_return
 
 
 
-testing_start_index = '2022-04-01'
-testing_end_index = '2023-06-21'
+testing_start_index = '2022-09-01'
+testing_end_index = '2023-09-1'
 
 BTC = yf.download('BTC-USD', start=testing_start_index, end=testing_end_index) # start=datetime(2017, 11, 9), end=datetime(2018, 12, 31)
 ETH = yf.download('ETH-USD',start=testing_start_index, end=testing_end_index)  #start=datetime(2018, 1, 1), end=datetime(2019, 9, 1)
@@ -73,17 +73,13 @@ testing_dataset= pd.concat([btc_R ,eth_R,pair_feature_ratio_shift1,pair_feature_
 testing_dataset = testing_dataset.dropna()
 
 # -------------------------------The hyperparameter obtained by GA----------------
-a = 1.1730277004674885  #Return  920.9439
-b = 0.8829080292183107
-k = 2
-window1 = 1
-window2 = 79
+# a = 1.1730277004674885  #Return  920.9439
+# b = 0.8829080292183107
+# k = 2
+# window1 = 1
+# window2 = 79
 
-# a = 1.600633084033785  #Return  80.3575
-# b = 0.43041683982038315
-# k = 4
-# window1 = 4
-# window2 = 78
+
 
 # a = 1.6620194524076644  #Return 58.603
 # b = 0.7798181445467653
@@ -91,11 +87,31 @@ window2 = 79
 # window1 = 4
 # window2 = 77
 
-# a = 1.0181671912095938  #Return change rate
-# b = 0.056908283307214425
-# k = 16
+
+#---------------------------------0829
+# a = 1.4328478353111154   #Return : 471.799
+# b = 0.16647979564829982
+# k = 2
 # window1 = 1
-# window2 = 55
+# window2 = 20
+
+# a = 1.6948122466279503 #Return : 40.8333
+# b = 0.9265630518121221
+# k = 2
+# window1 = 4
+# window2 = 57
+
+a = 1.5779379222211825  #Return : 649.0919   Max Drawdown: -0.643
+b = 0.5887748803233043
+k = 2
+window1 = 1
+window2 = 24
+
+# a = 1.095947223323753  #Return : 46.984  Max Drawdown: -0.2123
+# b = 0.5952449375236514
+# k = 2
+# window1 = 26
+# window2 = 79
 
 # -------------------------------The hyperparameter obtained by GA----------------
 

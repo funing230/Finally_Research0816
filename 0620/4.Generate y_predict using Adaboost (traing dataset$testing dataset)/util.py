@@ -455,7 +455,7 @@ def mlp_opt(X_train, y_train, X_test, y_test):
     return clf, y_pred
 
 
-def get_data_raw():
+def get_data_raw(testing_end_index):
 
     total_dataset = "0617_training_dataset.csv"
     dataset_df = pd.read_csv(total_dataset, parse_dates=[0], index_col=0)
@@ -467,8 +467,8 @@ def get_data_raw():
                                  ]) #, 'port_outa_z_score_singel_for_lable'])   ,'Log_R(-1)','port_out(-1)','Log_R(-2)','port_out(-2)'
     y = dataset_df['z_score_singel_for_lable']
 
-    X=X.loc[:'2022-04-01', ]
-    y=y.loc[:'2022-04-01', ]
+    X=X.loc[:testing_end_index, ]
+    y=y.loc[:testing_end_index, ]
 
     class_to_index = {0: 0, 1: 1, -1: 2}
 

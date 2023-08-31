@@ -22,7 +22,7 @@ from sklearn.preprocessing import MinMaxScaler
 from baseline_util import get_z_socre_hege,get_z_socre_no_hege,get_z_socre_two_windows
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
-
+from datetime import datetime, timedelta
 
 def get_mdd(x):
     """
@@ -37,8 +37,16 @@ def get_mdd(x):
 
 def get_pair_strategy_return(testing_start_index,testing_end_index):
 
-    BTC = yf.download('BTC-USD',start=testing_start_index, end=testing_end_index)
-    ETH = yf.download('ETH-USD', start=testing_start_index, end=testing_end_index)
+    # 将指定日期转换为datetime对象
+    start_date = datetime.strptime(testing_start_index, '%Y-%m-%d')
+    # 计算90天前的日期
+    data_start_date = start_date - timedelta(days=90)
+    # 将计算出的日期转换回字符串格式
+    data_start_index = data_start_date.strftime('%Y-%m-%d')
+
+
+    BTC = yf.download('BTC-USD',start=data_start_index, end=testing_end_index)
+    ETH = yf.download('ETH-USD', start=data_start_index, end=testing_end_index)
 
     # BTC = yf.download('BTC-USD', start=datetime(2018, 10, 1), end=datetime(2023, 5, 14)) # start=datetime(2017, 11, 9), end=datetime(2018, 12, 31)
     # ETH = yf.download('ETH-USD',start=datetime(2018, 10, 1), end=datetime(2023, 5, 14))  #start=datetime(2018, 1, 1), end=datetime(2019, 9, 1)
@@ -236,8 +244,8 @@ def get_pair_strategy_return(testing_start_index,testing_end_index):
     tests.insert(len(tests.columns), 'port_out(-2)', pd.DataFrame(tests['port_out']).shift(2))
 
 
-    tests.insert(len(tests.columns), 'up_th', up_th)
-    tests.insert(len(tests.columns), 'lw_th', lw_th)
+    tests.insert(len(tests.columns), 'up_th', up_th.shift(1))
+    tests.insert(len(tests.columns), 'lw_th', lw_th.shift(1))
 
     tests = tests.fillna(method='ffill')
 

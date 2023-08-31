@@ -29,7 +29,7 @@ from result_util import get_pair_strategy_return
 
 # Training period
 traing_start_index = '2017-11-09'
-traing_end_index = '2022-04-01'
+traing_end_index = '2022-09-01'
 
 # traing_start_index,traing_end_index
 
@@ -80,29 +80,42 @@ training_dataset= pd.concat([btc_R ,eth_R,pair_feature_ratio_shift1,pair_feature
 training_dataset = training_dataset.dropna()
 
 # -------------------------------The hyperparameter obtained by GA----------------
-a = 1.1730277004674885  #Return  920.9439
-b = 0.8829080292183107
-k = 2
-window1 = 1
-window2 = 79
+# a = 1.1730277004674885  #Return  920.9439
+# b = 0.8829080292183107
+# k = 2
+# window1 = 1
+# window2 = 79
 
-# a = 1.600633084033785  #Return  80.3575
-# b = 0.43041683982038315
-# k = 4
-# window1 = 4
-# window2 = 78
 
 # a = 1.6620194524076644  #Return 58.603
 # b = 0.7798181445467653
 # k = 2
 # window1 = 4
 # window2 = 77
-
-# a = 1.0181671912095938  #Return change rate
-# b = 0.056908283307214425
-# k = 16
+#---------------------------------0829
+# a = 1.4328478353111154   #Return : 471.799
+# b = 0.16647979564829982
+# k = 2
 # window1 = 1
-# window2 = 55
+# window2 = 20
+
+# a = 1.6948122466279503 #Return : 40.8333   Max Drawdown: -0.3835
+# b = 0.9265630518121221
+# k = 2
+# window1 = 4
+# window2 = 57
+
+a = 1.5779379222211825  #Return : 649.0919   Max Drawdown: -0.643
+b = 0.5887748803233043
+k = 2
+window1 = 1
+window2 = 24
+#~~~~~~~~~~~~~~~~~~~~~~~~
+# a = 1.1486201606191768  #Return : 76.6564  Max Drawdown: -0.4982
+# b = 0.30927478623887855
+# k = 5
+# window1 =19
+# window2 = 86
 
 # -------------------------------The hyperparameter obtained by GA----------------
 
@@ -118,7 +131,7 @@ z_score_ret=triple_barrier_change_rate(z_score,rbtc_ret,reth_ret ,a, b, k)
 
 
 z_score_singel_for_lable = z_score_ret['triple_barrier_signal']
-
+z_score_singel_for_lable.dropna()
 # tests.insert(len(tests.columns), 'ftestsig2', z_score_singel)
 training_dataset.insert(len(training_dataset.columns), 'rbtc_ret', rbtc_ret)
 training_dataset.insert(len(training_dataset.columns), 'reth_ret', reth_ret)
@@ -266,6 +279,7 @@ speed_BTC_Volume_R=speed_pair_feature['BTC_Volume_R']
 # training_dataset.insert(len(training_dataset.columns), 'speed_BTC_High_R(-2)', speed_BTC_High_R.shift(2))
 # training_dataset.insert(len(training_dataset.columns), 'speed_BTC_Low_R(-1)', speed_BTC_Low_R.shift(1))
 # training_dataset.insert(len(training_dataset.columns), 'speed_BTC_Low_R(-2)', speed_BTC_Low_R.shift(2))
+
 training_dataset.insert(len(training_dataset.columns), 'speed_BTC_Close_R(-1)', speed_BTC_Close_R.shift(1))
 training_dataset.insert(len(training_dataset.columns), 'speed_BTC_Close_R(-2)', speed_BTC_Close_R.shift(2))
 training_dataset.insert(len(training_dataset.columns), 'speed_BTC_Volume_R(-1)', speed_BTC_Volume_R.shift(1))

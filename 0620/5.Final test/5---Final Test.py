@@ -25,8 +25,8 @@ import matplotlib.dates as mdates
 from result_util import get_pairstrategy_return_for_test
 
 # Considering the consistency of the data (moving average window), the entire data set is used
-testing_start_index = '2022-04-01'
-testing_end_index = '2023-04-01'
+testing_start_index = '2022-09-01'
+testing_end_index = '2023-09-01'
 
 BTC = yf.download('BTC-USD', start=testing_start_index, end=testing_end_index) # start=datetime(2017, 11, 9), end=datetime(2018, 12, 31)
 ETH = yf.download('ETH-USD',start=testing_start_index, end=testing_end_index)  #start=datetime(2018, 1, 1), end=datetime(2019, 9, 1)
@@ -77,11 +77,24 @@ tests_for_lable = tests_for_lable.dropna()
 # window1 = 4
 # window2 = 78
 
-a = 1.6620194524076644  #Return 58.603
-b = 0.7798181445467653
+# a = 1.6620194524076644  #Return 58.603
+# b = 0.7798181445467653
+# k = 2
+# window1 = 4
+# window2 = 77
+#---------------------------------0829
+a = 1.5779379222211825  #Return : 649.0919   Max Drawdown: -0.643
+b = 0.5887748803233043
 k = 2
-window1 = 4
-window2 = 77
+window1 = 1
+window2 = 24
+
+# a = 1.1937296904781687  #Return : 18.7285
+# b = 0.05222374794788317
+# k = 2
+# window1 = 23
+# window2 =81
+
 # -------------------------------The hyperparameter obtained by GA----------------
 # btc_R ,eth_R
 # Generate a z-score based on the above hyperparameters
@@ -140,7 +153,7 @@ final_test_dataset=tests_for_lable.loc[testing_start_index:testing_end_index, ['
 
 
 # ----------------------------------------import the Adabost prediction labels, very important----------------------------------------
-final_label_path = "0618_y_prediction_lPLR.csv" #"0618_y_prediction_HPHR.csv"
+final_label_path ="0830noon1_y_prediction_LPLR.csv" #"0830noon1_y_prediction_LPLR.csv"#"0829_y_prediction_LPLR.csv"#"0829_y_prediction_HPHR.csv"#"0618_y_prediction_HPHR.csv" # "0618_y_prediction_lPLR.csv" "0829_y_prediction_LPLR.csv"
 final_label = pd.read_csv(final_label_path, parse_dates=[0], index_col=0)
 final_test_dataset.insert(len(final_test_dataset.columns), 'predict_final_label', final_label['y_pred'])
 predict_port_out_for_lable = 0.0

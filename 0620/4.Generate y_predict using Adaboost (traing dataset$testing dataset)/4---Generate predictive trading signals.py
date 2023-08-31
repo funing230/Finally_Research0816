@@ -6,14 +6,15 @@ from util import get_data_raw,train_test_split,\
     ,xgb_opt,cat_opt,ridge_opt,mlp_opt,Mlp_opt,knn_opt,gbc_ada_opt_test
 
 
-#remove 'BTC_RET', 'ETH_RET','rbtc_ret','reth_ret','z_score', 'port_outa_z_score_singel_for_lable','z_score_singel_for_lable'
-X_train, y_train = get_data_raw()
+
 
 
 #testing data
-testing_start_index = '2022-04-01'
-testing_end_index = '2023-06-21'
+testing_start_index = '2022-09-01'
+testing_end_index = '2023-09-01'
 
+#remove 'BTC_RET', 'ETH_RET','rbtc_ret','reth_ret','z_score', 'port_outa_z_score_singel_for_lable','z_score_singel_for_lable'
+X_train, y_train = get_data_raw(testing_end_index)
 
 test_dataset = "0617_testing_dataset.csv"
 test_dataset = pd.read_csv(test_dataset, parse_dates=[0], index_col=0)
@@ -54,27 +55,27 @@ y_pred=pd.DataFrame(y_pred)
 y_pred.columns = ['y_pred']
 y_pred.index=X_test.index
 
-pd.DataFrame(y_pred).to_csv("../5.Final test/0618_y_prediction_HPHR.csv", index=True)
+pd.DataFrame(y_pred).to_csv("../5.Final test/0830noon1_y_prediction_LPLR.csv", index=True)
 
 
 # #------------------------------------------------------
-
-from sklearn.metrics import classification_report, accuracy_score
-
-# 假设y_true和y_pred是真实标签和预测标签
-report = classification_report(y_test, y_test_pred, output_dict=True)
-accuracy = accuracy_score(y_test, y_test_pred)
-
-# 逐个打印指标
-for label, metrics in report.items():
-    if label == 'accuracy':
-        print(f"{label.capitalize()}: {metrics}")
-    else:
-        print(f"Label: {label}")
-        print(f"Precision: {metrics['precision']}")
-        print(f"Recall: {metrics['recall']}")
-        print(f"F1-score: {metrics['f1-score']}")
-        print(f"Support: {metrics['support']}")
-        print()
-
-print(f"Accuracy: {accuracy}")
+#
+# from sklearn.metrics import classification_report, accuracy_score
+#
+# # 假设y_true和y_pred是真实标签和预测标签
+# report = classification_report(y_test, y_test_pred, output_dict=True)
+# accuracy = accuracy_score(y_test, y_test_pred)
+#
+# # 逐个打印指标
+# for label, metrics in report.items():
+#     if label == 'accuracy':
+#         print(f"{label.capitalize()}: {metrics}")
+#     else:
+#         print(f"Label: {label}")
+#         print(f"Precision: {metrics['precision']}")
+#         print(f"Recall: {metrics['recall']}")
+#         print(f"F1-score: {metrics['f1-score']}")
+#         print(f"Support: {metrics['support']}")
+#         print()
+#
+# print(f"Accuracy: {accuracy}")
