@@ -339,17 +339,16 @@ training_dataset.insert(len(training_dataset.columns), 'rreth(-2)', rreth.shift(
 # training_dataset.insert(len(training_dataset.columns), 'pair_trading_signal', pair_trading_dataset['ftestsig2'])
 #
 
-slider_window=3
-up_th = (z_score.rolling(window=slider_window).mean()) + (z_score.rolling(window=slider_window).std() * (a-1))  # upper threshold
-lw_th = (z_score.rolling(window=slider_window).mean()) - (z_score.rolling(window=slider_window).std() * (1-b))  # lower threshold
-up_th = up_th.dropna()
-lw_th = lw_th.dropna()
-training_dataset.insert(len(training_dataset.columns), 'up_th(-1)', up_th.shift(1))
-training_dataset.insert(len(training_dataset.columns), 'lw_th(-1)', lw_th.shift(1))
-
-training_dataset.insert(len(training_dataset.columns), 'up_th(-2)', up_th.shift(2))
-training_dataset.insert(len(training_dataset.columns), 'lw_th(-2)', lw_th.shift(2))
-
+# up_th = (z_score.rolling(window=2).mean()) + (z_score.rolling(window=2).std() * 2)  # upper threshold
+# lw_th = (z_score.rolling(window=2).mean()) - (z_score.rolling(window=2).std() * 2)  # lower threshold
+# up_th = up_th.dropna()
+# lw_th = lw_th.dropna()
+# training_dataset.insert(len(training_dataset.columns), 'up_th(-1)', up_th.shift(1))
+# training_dataset.insert(len(training_dataset.columns), 'lw_th(-1)', lw_th.shift(1))
+#
+# training_dataset.insert(len(training_dataset.columns), 'up_th(-2)', up_th.shift(2))
+# training_dataset.insert(len(training_dataset.columns), 'lw_th(-2)', lw_th.shift(2))
+#
 # training_dataset.insert(len(training_dataset.columns), 'up_th(-3)', up_th.shift(3))
 # training_dataset.insert(len(training_dataset.columns), 'lw_th(-3)', lw_th.shift(3))
 
