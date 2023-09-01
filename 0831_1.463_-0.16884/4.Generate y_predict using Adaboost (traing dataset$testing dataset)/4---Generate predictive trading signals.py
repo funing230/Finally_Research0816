@@ -54,8 +54,8 @@ X_test = test_dataset.drop(
 # X_test['speed_ETH_Open_R(-1)'] = np.where(np.isinf(X_test['speed_ETH_Open_R(-1)']), X_test['speed_ETH_Open_R(-1)'].shift(-5), X_test['speed_ETH_Open_R(-1)'])
 # X_test['speed_ETH_Open_R(-2)'] = np.where(np.isinf(X_test['speed_ETH_Open_R(-2)']), X_test['speed_ETH_Open_R(-2)'].shift(-5), X_test['speed_ETH_Open_R(-2)'])
 
-temp1=np.isfinite(X_train).all()
-temp2=np.isfinite(X_test).all()
+# temp1=np.isfinite(X_train).all()
+# temp2=np.isfinite(X_test).all()
 y_pred=gbc_ada_opt_test(X_train, y_train, X_test)  #best--best--best--best--------- Accuracy: 0.8198019801980198
 
 
