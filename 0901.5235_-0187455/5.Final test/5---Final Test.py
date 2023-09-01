@@ -279,3 +279,4 @@ results2 = [{'0': 'Test:',
 
 table2 = pd.DataFrame(results2)
 print_table(table2.values.tolist())
+print()
