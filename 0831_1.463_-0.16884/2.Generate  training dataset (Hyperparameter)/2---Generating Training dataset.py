@@ -68,9 +68,9 @@ eth_R = pair_ret['ETH_RET']
 
 
 # Use hege to get trading pairs
-hege= rg.OLS(btc_R, eth_R).fit().params[0]
+# hege= rg.OLS(btc_R, eth_R).fit().params[0]
 
-pair_train= btc_R - hege * eth_R
+# pair_train= btc_R - hege * eth_R
 
 # returns to build signals
 rbtc_ret= pair_ret['BTC_RET']
@@ -374,6 +374,6 @@ training_dataset.insert(len(training_dataset.columns), 'rate_z_score(-2)', rate_
 
 
 training_dataset=training_dataset.dropna()
-training_dataset.to_csv("../4.Generate y_predict using Adaboost (traing dataset$testing dataset)/0617_training_dataset.csv", index=True)
+training_dataset.to_csv("../4.Generate y_predict using Adaboost (traing dataset$testing dataset)/0902_training_dataset.csv", index=True)
 
 print('08311518')

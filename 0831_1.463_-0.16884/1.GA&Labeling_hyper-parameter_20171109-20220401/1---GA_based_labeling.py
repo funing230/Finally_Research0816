@@ -17,9 +17,9 @@ from datetime import datetime
 
 
 class HybridMlp:
-    def __init__(self, dataset, pair_train,GA_epoch,pop_size):  #dataset,
+    def __init__(self,dataset,GA_epoch,pop_size):  #dataset,, pair_train
         self.dataset = dataset
-        self.pair_train = pair_train
+        # self.pair_train = pair_train
         self.GA_epoch = GA_epoch
         self.pop_size = pop_size
 
@@ -184,7 +184,7 @@ tests= pd.concat([pair_ret['BTC_RET'] ,pair_ret['ETH_RET']], ignore_index=False,
 
 hege= rg.OLS(pair_ret['BTC_RET'] ,pair_ret['ETH_RET']).fit().params[0]
 # hege=1
-pair_train= pair_ret['BTC_RET'] - hege * pair_ret['ETH_RET']
+# pair_train= pair_ret['BTC_RET'] - hege * pair_ret['ETH_RET']
 # BTC_ETH Rolling Spread Z-Score Calculation
 
 rbtc_ret= pair_ret['BTC_RET']
