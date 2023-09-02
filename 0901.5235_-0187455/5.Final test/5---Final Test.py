@@ -65,11 +65,17 @@ reth_ret= pair_ret['ETH_RET']
 tests_for_lable= pd.concat([btc_R ,eth_R], ignore_index=False,axis=1)
 tests_for_lable = tests_for_lable.dropna()
 # -------------------------------The hyperparameter obtained by GA----------------
-a = 1.1730277004674885  #Return  920.9439
-b = 0.8829080292183107
+# a = 1.1730277004674885  #Return  920.9439
+# b = 0.8829080292183107
+# k = 2
+# window1 = 1
+# window2 = 79
+
+a = 1.1949552532482448  #1.2585  -0.090287
+b = 0.21272475392074522
 k = 2
 window1 = 1
-window2 = 79
+window2 = 28
 
 # a = 1.600633084033785  #Return  80.3575
 # b = 0.43041683982038315
@@ -175,7 +181,7 @@ for i in range(0, len(final_test_dataset.index)):
         '''
         predict_port_out_for_lable = final_test_dataset.at[final_test_dataset.index[i], 'reth_ret']
     elif final_test_dataset.at[final_test_dataset.index[i], 'predict_final_label'] == 2:#   (class_to_index = {0: 0, 1: 1, -1: 2})
-        '''
+        '''·
         If the value of z_score touches the lower barrier, 
         indicating a negative deviation from the mean, 
         it means that the growth rate of ETH is too fast. 
