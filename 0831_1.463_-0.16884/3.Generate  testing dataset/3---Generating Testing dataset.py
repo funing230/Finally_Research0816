@@ -73,12 +73,17 @@ testing_dataset= pd.concat([btc_R ,eth_R,pair_feature_ratio_shift1,pair_feature_
 testing_dataset = testing_dataset.dropna()
 
 # -------------------------------The hyperparameter obtained by GA----------------
-a = 1.1730277004674885  #Return  920.9439
-b = 0.8829080292183107
+# a = 1.1730277004674885  #Return  920.9439
+# b = 0.8829080292183107
+# k = 2
+# window1 = 1
+# window2 = 79
+
+a = 1.1949552532482448  #1.2585  -0.090287
+b = 0.21272475392074522
 k = 2
 window1 = 1
-window2 = 79
-
+window2 = 28
 
 
 # a = 1.6620194524076644  #Return 58.603
