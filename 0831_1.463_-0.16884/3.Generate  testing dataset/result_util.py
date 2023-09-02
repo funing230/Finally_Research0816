@@ -2,16 +2,16 @@ import math
 
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-from mealpy.evolutionary_based import GA
-from mealpy.swarm_based import GWO
-from permetrics.regression import RegressionMetric
-import tensorflow as tf
+# from mealpy.evolutionary_based import GA
+# from mealpy.swarm_based import GWO
+# from permetrics.regression import RegressionMetric
+# import tensorflow as tf
 import statsmodels.regression.linear_model as rg
 import numpy as np
 import random
 random.seed(7)
 np.random.seed(42)
-tf.random.set_seed(116)
+# tf.random.set_seed(116)
 from GA_util_all_data import print_table,pdmdd,normalize_series,triple_barrier,calculate_mdd,get_mdd
 from numpy import array, reshape
 import numpy as np

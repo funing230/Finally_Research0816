@@ -2,16 +2,16 @@ import math
 
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-from mealpy.evolutionary_based import GA
-from mealpy.swarm_based import GWO
-from permetrics.regression import RegressionMetric
-import tensorflow as tf
+# from mealpy.evolutionary_based import GA
+# from mealpy.swarm_based import GWO
+# from permetrics.regression import RegressionMetric
+# import tensorflow as tf
 import statsmodels.regression.linear_model as rg
 import numpy as np
 import random
 random.seed(7)
 np.random.seed(42)
-tf.random.set_seed(116)
+# tf.random.set_seed(116)
 from GA_util_all_data import print_table,pdmdd,normalize_series,triple_barrier,calculate_mdd,get_mdd,triple_barrier_change_rate
 from numpy import array, reshape
 import numpy as np
@@ -338,16 +338,24 @@ training_dataset.insert(len(training_dataset.columns), 'rreth(-2)', rreth.shift(
 # training_dataset.insert(len(training_dataset.columns), 'lw_th(-3)', pair_trading_dataset['lw_th'].shift(3))
 # training_dataset.insert(len(training_dataset.columns), 'pair_trading_signal', pair_trading_dataset['ftestsig2'])
 #
+slide_window=3
+up_th = (z_score.rolling(window=slide_window,min_periods=1).mean()) + (z_score.rolling(window=slide_window,min_periods=1).std() * (a-1))  # upper threshold
+lw_th = (z_score.rolling(window=slide_window,min_periods=1).mean()) - (z_score.rolling(window=slide_window,min_periods=1).std() * (1-b))  # lower threshold
+up_th = up_th.dropna()
+lw_th = lw_th.dropna()
+# speed_up_th=(up_th.pct_change(1).dropna()).pct_change(1).dropna()
+# speed_lw_th=(lw_th.pct_change(1).dropna()).pct_change(1).dropna()
+rate_up_th=up_th.pct_change(1).dropna()
+rate_lw_th=lw_th.pct_change(1).dropna()
+training_dataset.insert(len(training_dataset.columns), 'up_th(-1)', rate_up_th.shift(1))
+training_dataset.insert(len(training_dataset.columns), 'lw_th(-1)', rate_lw_th.shift(1))
 
-# up_th = (z_score.rolling(window=2).mean()) + (z_score.rolling(window=2).std() * 2)  # upper threshold
-# lw_th = (z_score.rolling(window=2).mean()) - (z_score.rolling(window=2).std() * 2)  # lower threshold
-# up_th = up_th.dropna()
-# lw_th = lw_th.dropna()
-# training_dataset.insert(len(training_dataset.columns), 'up_th(-1)', up_th.shift(1))
-# training_dataset.insert(len(training_dataset.columns), 'lw_th(-1)', lw_th.shift(1))
-#
-# training_dataset.insert(len(training_dataset.columns), 'up_th(-2)', up_th.shift(2))
-# training_dataset.insert(len(training_dataset.columns), 'lw_th(-2)', lw_th.shift(2))
+training_dataset.insert(len(training_dataset.columns), 'up_th(-2)', rate_up_th.shift(2))
+training_dataset.insert(len(training_dataset.columns), 'lw_th(-2)', rate_lw_th.shift(2))
+
+
+
+# rate_z_score=z_score.pct_change(1).dropna()
 #
 # training_dataset.insert(len(training_dataset.columns), 'up_th(-3)', up_th.shift(3))
 # training_dataset.insert(len(training_dataset.columns), 'lw_th(-3)', lw_th.shift(3))
