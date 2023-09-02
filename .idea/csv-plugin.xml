@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CsvFileAttributes">
+    <option name="attributeMap">
+      <map>
+        <entry key="\0617\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_testing_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0617\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_training_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0617\5.Final test\0618_y_prediction.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0619\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_testing_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0619\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_training_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0619\5.Final test\0618_y_prediction.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0620\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_testing_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0620\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_training_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0620\5.Final test\0618_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0620\5.Final test\0618_y_prediction_lPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0620\5.Final test\0829_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0620\5.Final test\0829_y_prediction_LPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0620\5.Final test\0829afternoon_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0620\5.Final test\0829afternoon_y_prediction_LPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0620\5.Final test\0830noon1_y_prediction_LPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_testing_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_training_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831\5.Final test\0618_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831\5.Final test\0618_y_prediction_lPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831\5.Final test\0618_y_prediction_lPLR76.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831\5.Final test\0829_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831\5.Final test\0829_y_prediction_LPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4035_ -0.146166\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_testing_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4035_ -0.146166\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_training_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4035_ -0.146166\5.Final test\0618_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4035_ -0.146166\5.Final test\0618_y_prediction_lPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4035_ -0.146166\5.Final test\0618_y_prediction_lPLR76.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4035_ -0.146166\5.Final test\0829_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4035_ -0.146166\5.Final test\0829_y_prediction_LPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4158_0.166007\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_testing_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4158_0.166007\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_training_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4158_0.166007\5.Final test\0618_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4158_0.166007\5.Final test\0618_y_prediction_lPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4158_0.166007\5.Final test\0618_y_prediction_lPLR76.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4158_0.166007\5.Final test\0829_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.4158_0.166007\5.Final test\0829_y_prediction_LPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.463_-0.16884\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_testing_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.463_-0.16884\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_training_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.463_-0.16884\5.Final test\0618_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.463_-0.16884\5.Final test\0618_y_prediction_lPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.463_-0.16884\5.Final test\0618_y_prediction_lPLR76.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.463_-0.16884\5.Final test\0829_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0831_1.463_-0.16884\5.Final test\0829_y_prediction_LPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0901.5235_-0187455\0831_1.463_-0.16884\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_testing_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0901.5235_-0187455\0831_1.463_-0.16884\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_training_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0901.5235_-0187455\0831_1.463_-0.16884\5.Final test\0618_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0901.5235_-0187455\0831_1.463_-0.16884\5.Final test\0618_y_prediction_lPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0901.5235_-0187455\0831_1.463_-0.16884\5.Final test\0618_y_prediction_lPLR76.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0901.5235_-0187455\0831_1.463_-0.16884\5.Final test\0829_y_prediction_HPHR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0901.5235_-0187455\0831_1.463_-0.16884\5.Final test\0829_y_prediction_LPLR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0901.5235_-0187455\4.Generate y_predict using Adaboost (traing dataset$testing dataset)\0617_testing_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\0901.5235_-0187455\5.Final test\0618_y_prediction_lPLR76.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry />
+      </map>
+    </option>
+  </component>
+</project>
