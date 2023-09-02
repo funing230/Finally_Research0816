@@ -353,7 +353,11 @@ training_dataset.insert(len(training_dataset.columns), 'lw_th(-1)', rate_lw_th.s
 training_dataset.insert(len(training_dataset.columns), 'up_th(-2)', rate_up_th.shift(2))
 training_dataset.insert(len(training_dataset.columns), 'lw_th(-2)', rate_lw_th.shift(2))
 
+training_dataset.insert(len(training_dataset.columns), 'up_th(-3)', rate_up_th.shift(3))
+training_dataset.insert(len(training_dataset.columns), 'lw_th(-3)', rate_up_th.shift(3))
 
+# training_dataset.insert(len(training_dataset.columns), 'up_th(-4)', rate_up_th.shift(4))
+# training_dataset.insert(len(training_dataset.columns), 'lw_th(-4)', rate_up_th.shift(4))
 
 # rate_z_score=z_score.pct_change(1).dropna()
 #

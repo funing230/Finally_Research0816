@@ -235,8 +235,11 @@ testing_dataset.insert(len(testing_dataset.columns), 'lw_th(-1)', rate_lw_th.shi
 testing_dataset.insert(len(testing_dataset.columns), 'up_th(-2)', rate_up_th.shift(2))
 testing_dataset.insert(len(testing_dataset.columns), 'lw_th(-2)', rate_lw_th.shift(2))
 #
-# testing_dataset.insert(len(testing_dataset.columns), 'up_th(-3)', up_th.shift(3))
-# testing_dataset.insert(len(testing_dataset.columns), 'lw_th(-3)', lw_th.shift(3))
+testing_dataset.insert(len(testing_dataset.columns), 'up_th(-3)', rate_up_th.shift(3))
+testing_dataset.insert(len(testing_dataset.columns), 'lw_th(-3)', rate_up_th.shift(3))
+
+# testing_dataset.insert(len(testing_dataset.columns), 'up_th(-4)', rate_up_th.shift(4))
+# testing_dataset.insert(len(testing_dataset.columns), 'lw_th(-4)', rate_up_th.shift(4))
 
 speed_z_score=(z_score.pct_change(1).dropna()).pct_change(1).dropna()
 testing_dataset.insert(len(testing_dataset.columns), 'speed_z_score(-1)', speed_z_score.shift(1))
